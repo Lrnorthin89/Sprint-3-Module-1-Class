@@ -89,6 +89,44 @@
         console.log(obj2);
         console.log(obj1);
 
+        class CountDown {
+				constructor(number) {
+					console.log(`Initializing CountDown with number: ${number}`);
+					this.number = number;
+				}
+
+				count() {
+					console.log(`Current number: ${this.number}`);
+
+					if (this.number < 0) {
+						console.log("Number is less than 0, returning null");
+						return null;
+					}
+
+					if (this.number === 0) {
+						console.log("Number is 0, returning Liftoff!");
+						this.number -= 1; // Decrement to ensure it doesn't keep returning 'Liftoff!' on subsequent calls
+						return "Liftoff!";
+					}
+
+					// There's a mistake in the original return statement.
+					// It should use backticks (`) for template literals instead of regular quotes (').
+					// Correcting it to properly decrement and return the number.
+					const countdownMessage = `${this.number--}!`;
+					console.log(`Counting down: ${countdownMessage}`);
+					return countdownMessage;
+				}
+			}
+
+			let minusThree = new CountDown(3);
+
+			// Example usage
+			console.log(minusThree.count()); // Should log 3!
+			console.log(minusThree.count()); // Should log 2!
+			console.log(minusThree.count()); // Should log 1!
+			console.log(minusThree.count()); // Should log "Liftoff!"
+			console.log(minusThree.count()); // Should log null, as number is now below 0
+
     </script>
     
 </body>
