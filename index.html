@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // class oldStudent {
+        //     constructor() {
+        //         this.name ='Leon Northington'
+        //         this.grade = 'A';
+        //         this.year = 2;
+        //         this.school = 'Bloomtech'
+        //     }
+        //     test () {
+        //         return `${this.name} received a ${this.grade} at ${this.school}`; 
+        //     } 
+        // }
+        // let Student = old Student();
+        // console.log(oldStudent.test());
+
+        class Student {
+            constructor(name, grade, year, school) {
+                this.name ='Leon Northington'
+                this.grade = 'A';
+                this.year = 1;
+                this.school = 'Bloomtech'
+            }
+            test () {
+                return `${this.name} received a ${this.grade} at ${this.school}`; 
+            } 
+            welcomeConfirmation (){
+                return `${this.name} has registered, their current grade is ${this.grade}. Send welcome letter from ${this.school}`;
+                //let newStudent = new Student();
+                //console.log.(Student.test());
+                console.log(newStudent.test());
+                console.log(newStudent1.welcomeConfirmation());
+            } 
+        }
+        let newStudent = new Student();
+        console.log(newStudent.test());
+
+        class Dog {
+            constructor(name, breed, age, weight, paper) {
+                this.name = name;
+                this.breed = breed;
+                this.age = age;
+                this.weight = weight;
+                this.paper = paper
+            }
+            walk() {
+                return `${this.name}want to go for a walk`;
+            }
+            play(toy){
+                return `${this.name} loves playing with a ${toy}`;
+            }
+        }
+
+        let Jordan = new Dog('Jordan', 'Pit Bull', 10, 85, 'No');
+        console.log(Jordan);
+        console.log(Jordan.walk());
+        console.log(Jordan.play('rope'))
+
+        let string = 'Birthday'
+        string[0] = 'B';
+        console.log(string);
+
+        let array = ['a', 'b', 'c'];
+        array[1] = 'B';
+        console.log(array);
+
+
+        let a = 10; //value
+        let b = a; //copy of value
+        console.log(a);
+        console.log(b);
+        b = 20; //doesn't affect 'a'
+        console.log(b);
+        console.log(a);
+
+        let obj1 = {name: 'Deidre'}; //immutable object
+        let obj2 = obj1;
+
+        console.log(obj1);
+        console.log(obj2);
+        obj2.name = "Leon";
+        console.log(obj2);
+        console.log(obj1);
+
+    </script>
+    
+</body>
+</html>
